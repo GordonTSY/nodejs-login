@@ -1,0 +1,40 @@
+doctype 5
+html
+	head
+		title E-Campus 5 | NCTU		
+		meta(charset='utf-8')
+		link(rel='stylesheet', href='/vendor/bootstrap.min.css')
+		link(rel='stylesheet', href='/css/style.css')
+		link(rel='shortcut icon', href='http://cdn.flaticon.com/png/256/42912.png')
+	body
+		a(href="https://github.com/ylhuang86/e5-src")
+			img#github-banner(style="position:absolute;top:30px;right:0;border:0;", src="https://camo.githubusercontent.com/652c5b9acfaddf3a9c326fa6bde407b87f7be0f4/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6f72616e67655f6666373630302e706e67", alt="Fork me on GitHub")
+			
+	block content
+	div.navbar.navbar-fixed-top	
+		div.navbar-inner
+			div.container-fluid
+				ul#global-nav.nav.pull-left
+					a(href='main').brand#main E5-Campus
+					li
+						a(href='wboard')#wboard 電子白板
+					li
+						a(href='material')#material 課堂教材
+					li
+						a(href='home').left#home 個人中心					
+				a(href='#')#chtbtn.btn.btn-danger.near 中文					
+				a(href='#')#engbtn.btn.btn-warning.near English
+				button#btn-logout.btn.btn-primary
+					i.icon-lock.icon-white
+					| Sign Out	
+		
+	block scripts		
+	script(src='/vendor/jquery.min.js')
+	script(src='/vendor/jquery.form.js')
+	script(src='/vendor/bootstrap-modal.js')
+	script(src='/vendor/bootstrap-transition.js')
+	script(src='/js/views/home.js')	
+	script(src='/js/controllers/homeController.js')
+	script(src='/js/form-validators/accountValidator.js')	
+	script(src='/js/chlang.js')
+	

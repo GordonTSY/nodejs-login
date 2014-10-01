@@ -1,0 +1,42 @@
+
+extends layout
+
+block content
+	a(href="https://github.com/ylhuang86/e5-src")
+		img#github-banner(style="position:absolute;top:0px;right:0;border:0;", src="https://camo.githubusercontent.com/652c5b9acfaddf3a9c326fa6bde407b87f7be0f4/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6f72616e67655f6666373630302e706e67", alt="Fork me on GitHub")	
+	#login-container
+		form( method="post")#login-form.well.span4
+			h1(id='heading') e-Campus 5
+			p.subheading 
+				NCTU Learning Platform
+			label#labeluser Username
+			input(type="text", name="user", id='user-tf').span4.required
+			
+			label#labelpass Password
+			input(type="password", name="pass", id='pass-tf').span4.required
+			
+			button(type="submit")#btn-login.btn.btn-primary
+				i.icon-lock.icon-white#btn-login2
+				| Sign in
+			label#remember-me.checkbox Remember Me
+			input(type="checkbox", checked='checked').checkbox2
+			div.clear-fix
+			hr
+			div.btm-links
+				a(href='#')#forgot-password Forgot Your Password?
+				a(href='/signup')#create-account Create An Account			
+			div.btm-lang			
+				a(href='#')#cht-btn.btn.btn-danger.near 中文
+				a(href='#')#eng-btn.btn.btn-warning.near English
+	include modals/alert
+	include modals/lost-password
+
+block scripts
+	script(src='/vendor/jquery.min.js')
+	script(src='/vendor/jquery.form.js')
+	script(src='/vendor/bootstrap-modal.js')
+	script(src='/vendor/bootstrap-transition.js')
+	script(src='/js/views/login.js')
+	script(src='/js/controllers/loginController.js')
+	script(src='/js/form-validators/loginValidator.js')
+	script(src='/js/form-validators/emailValidator.js')
